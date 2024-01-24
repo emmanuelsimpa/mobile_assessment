@@ -19,7 +19,7 @@ module.exports = {
   ],
   ignorePatterns: ['!.*', 'dist', 'node_modules'],
   rules: {
-    // 'prettier/prettier': 'error',
+    'prettier/prettier': 'error',
     'react-native/no-inline-styles': 0,
     'no-unused-vars': 'off',
     'unused-imports/no-unused-imports': 'error',

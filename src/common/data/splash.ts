@@ -7,7 +7,7 @@ export const splashData = [
   {
     id: 1,
     title: 'Welcome to IndRecord',
-    subtitle: `I'm sure you have carefully read the privacy policy`,
+    subtitle: 'I am sure you have carefully read the privacy policy',
   },
   {
     id: 2,
