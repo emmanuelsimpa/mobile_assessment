@@ -15,7 +15,7 @@ export const useSplashScreen = () => {
   };
 
   const handleSkip = () => {
-    navigation.navigate('dashboard');
+    navigation.navigate('login');
   };
 
   return {steps, handleNextSteps, handleSkip};

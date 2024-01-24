@@ -1,14 +1,18 @@
 import React from 'react';
 import {Box, Button, Center, Stack} from 'native-base';
+import {useLoginScreen} from '../hooks/login-screen';
+// import GoogleIcon from '@/assets/svgs/google.svg';
 
 export default function LoginScreen() {
+  const {handleLogin} = useLoginScreen();
   return (
     <Box backgroundColor={'#01071B'} flex={1} safeArea>
       <Center flex={1}>
         <Stack alignItems={'center'} space={6} width={'100%'}>
           <Box h={16} width={'5/6'} rounded={'full'}>
             <Button
-              // leftIcon={<Icon as={GoogleIcon} />}
+              // leftIcon={<GoogleIcon />}
+              onPress={handleLogin}
               bg={'#01071B'}
               _text={{
                 color: 'warmGray.500',
@@ -32,6 +36,7 @@ export default function LoginScreen() {
           </Box>
           <Box h={16} width={'5/6'} rounded={'full'}>
             <Button
+              onPress={handleLogin}
               bg={'#01071B'}
               _text={{
                 color: 'warmGray.500',
