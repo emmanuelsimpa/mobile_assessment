@@ -4,7 +4,11 @@ import {useLoginScreen} from '../hooks/login-screen';
 // import GoogleIcon from '@/assets/svgs/google.svg';
 
 export default function LoginScreen() {
-  const {handleLogin} = useLoginScreen();
+  const {handleGoogleSignin, isLoading} = useLoginScreen();
+
+  if (isLoading) {
+    return <Box backgroundColor={'#01071B'} flex={1} safeArea />;
+  }
   return (
     <Box backgroundColor={'#01071B'} flex={1} safeArea>
       <Center flex={1}>
@@ -12,7 +16,7 @@ export default function LoginScreen() {
           <Box h={16} width={'5/6'} rounded={'full'}>
             <Button
               // leftIcon={<GoogleIcon />}
-              onPress={handleLogin}
+              onPress={handleGoogleSignin}
               bg={'#01071B'}
               _text={{
                 color: 'warmGray.500',
@@ -36,7 +40,7 @@ export default function LoginScreen() {
           </Box>
           <Box h={16} width={'5/6'} rounded={'full'}>
             <Button
-              onPress={handleLogin}
+              onPress={handleGoogleSignin}
               bg={'#01071B'}
               _text={{
                 color: 'warmGray.500',
